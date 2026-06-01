@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iGV.com 运营战略 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:       #16150f;
+  --ink-2:     #4a4840;
+  --ink-3:     #8a877e;
+  --paper:     #f5f3ee;
+  --paper-2:   #eceae3;
+  --paper-3:   #e2dfd6;
+  --gold:      #c9a84c;
+  --gold-lt:   #f0e4bc;
+  --blue:      #1d4e8f;
+  --blue-lt:   #d4e3f5;
+  --green:     #2a6b3c;
+  --green-lt:  #d4eddc;
+  --amber:     #8f4e1d;
+  --amber-lt:  #f5e0cc;
+  --violet:    #4a1d8f;
+  --violet-lt: #e0d4f5;
+  --red:       #8f1d2a;
+  --red-lt:    #f5d4d8;
+  --border:    #d4d0c4;
+  --r:         6px;
+  --r-lg:      12px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ── NAV ── */
+.top-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--ink);
+  display: flex; align-items: center;
+  padding: 0 32px;
+  height: 52px;
+  gap: 4px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.18);
+}
+.nav-logo {
+  font-family: 'DM Serif Display', serif;
+  color: var(--gold);
+  font-size: 18px;
+  margin-right: 28px;
+  white-space: nowrap;
+  letter-spacing: .02em;
+}
+.nav-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,.55);
+  background: transparent;
+  border: none;
+  padding: 6px 13px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all .18s;
+  letter-spacing: .02em;
+}
+.nav-btn:hover { color: #fff; background: rgba(255,255,255,.1); }
+.nav-btn.on { color: var(--ink); background: var(--gold); font-weight: 600; }
+
+/* ── PANELS ── */
+.panel { display: none; }
+.panel.on { display: block; }
+
+/* ── HERO ── */
+.hero {
+  background: var(--ink);
+  padding: 64px 48px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent, transparent 40px,
+    rgba(201,168,76,.04) 40px, rgba(201,168,76,.04) 41px
+  );
+}
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(32px, 4vw, 52px);
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  max-width: 640px;
+}
+.hero-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,.6);
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+.hero-metrics {
+  display: flex; gap: 24px; flex-wrap: wrap;
+}
+.metric-pill {
+  background: rgba(255,255,255,.08);
+  border: 0.5px solid rgba(255,255,255,.15);
+  border-radius: 8px;
+  padding: 12px 20px;
+}
+.metric-pill .val {
+  font-family: 'DM Serif Display', serif;
+  font-size: 26px;
+  color: var(--gold);
+  display: block;
+  line-height: 1.1;
+}
+.metric-pill .lbl {
+  font-size: 11px;
+  color: rgba(255,255,255,.5);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-top: 2px;
+}
+
+/* ── LAYOUT ── */
+.page { max-width: 960px; margin: 0 auto; padding: 40px 32px; }
+.section { margin-bottom: 48px; }
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 26px;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.section-sub {
+  font-size: 13px;
+  color: var(--ink-3);
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── CARDS ── */
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 20px 24px;
+  margin-bottom: 12px;
+}
+.card-sm {
+  background: var(--paper-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 14px 16px;
+  margin-bottom: 8px;
+}
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.g3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+.g4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
+
+/* ── LABELS ── */
+.label {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  margin-bottom: 8px; display: block;
+}
+.h3 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.h4 { font-size: 13px; font-weight: 600; margin-bottom: 3px; }
+.body { font-size: 13px; color: var(--ink-2); line-height: 1.65; }
+.small { font-size: 12px; color: var(--ink-3); line-height: 1.6; }
+
+/* ── CHIPS ── */
+.chip {
+  display: inline-block; font-size: 11px; font-weight: 600;
+  padding: 2px 9px; border-radius: 20px;
+  letter-spacing: .03em;
+}
+.chip-gold   { background: var(--gold-lt);   color: #7a5a10; }
+.chip-blue   { background: var(--blue-lt);   color: var(--blue); }
+.chip-green  { background: var(--green-lt);  color: var(--green); }
+.chip-amber  { background: var(--amber-lt);  color: var(--amber); }
+.chip-violet { background: var(--violet-lt); color: var(--violet); }
+.chip-red    { background: var(--red-lt);    color: var(--red); }
+
+/* ── ACCENTS ── */
+.accent-bar {
+  width: 3px; flex-shrink: 0; border-radius: 3px;
+  align-self: stretch;
+}
+.row-accent { display: flex; gap: 14px; align-items: flex-start; }
+
+/* ── BIZ CARDS ── */
+.biz-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.biz-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.biz-a::before { background: var(--blue); }
+.biz-b::before { background: var(--gold); }
+.biz-c::before { background: var(--green); }
+.biz-d::before { background: var(--violet); }
+
+.biz-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 36px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.biz-a .biz-num { color: var(--blue); }
+.biz-b .biz-num { color: #b8860b; }
+.biz-c .biz-num { color: var(--green); }
+.biz-d .biz-num { color: var(--violet); }
+
+.star-row { display: flex; gap: 4px; margin: 10px 0 6px; }
+.star-box {
+  flex: 1; text-align: center;
+  padding: 7px 4px; border-radius: 5px;
+  font-size: 10px; font-weight: 600;
+}
+.star-box .stars { font-size: 13px; display: block; }
+
+/* ── TIMELINE ── */
+.timeline { position: relative; }
+.timeline::before {
+  content: '';
+  position: absolute; left: 90px; top: 0; bottom: 0;
+  width: 1px; background: var(--border);
+}
+.tl-row {
+  display: flex; gap: 0; margin-bottom: 0;
+  position: relative;
+}
+.tl-time {
+  width: 90px; flex-shrink: 0;
+  font-size: 11px; font-weight: 600;
+  color: var(--ink-3);
+  padding: 16px 16px 16px 0;
+  text-align: right;
+  letter-spacing: .02em;
+}
+.tl-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--paper);
+  position: absolute; left: 85.5px; top: 19px;
+  z-index: 1;
+}
+.tl-content {
+  flex: 1;
+  padding: 12px 0 16px 24px;
+  border-bottom: 1px solid var(--paper-3);
+}
+.tl-row:last-child .tl-content { border-bottom: none; }
+.tl-phase {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-3); margin-bottom: 4px;
+}
+
+/* ── ACTION ITEMS ── */
+.action-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--paper-3);
+}
+.action-item:last-child { border-bottom: none; }
+.action-num {
+  width: 24px; height: 24px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700;
+  flex-shrink: 0;
+}
+.action-body { flex: 1; }
+.action-meta {
+  display: flex; gap: 8px; align-items: center;
+  flex-wrap: wrap; margin-top: 6px;
+}
+
+/* ── TARGET TABLE ── */
+.target-tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
+.target-tbl th {
+  text-align: left; padding: 10px 14px;
+  background: var(--ink); color: #fff;
+  font-size: 11px; font-weight: 600;
+  letter-spacing: .06em; text-transform: uppercase;
+}
+.target-tbl th:first-child { border-radius: 8px 0 0 0; }
+.target-tbl th:last-child  { border-radius: 0 8px 0 0; }
+.target-tbl td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--paper-3);
+  color: var(--ink-2);
+}
+.target-tbl tr:nth-child(even) td { background: var(--paper-2); }
+.target-tbl .now td { color: var(--ink-3); font-style: italic; }
+.target-tbl .key td { font-weight: 600; color: var(--ink); }
+.target-tbl .hi { font-weight: 700; color: var(--green); }
+
+/* ── TEAM ── */
+.team-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.team-header {
+  padding: 14px 20px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.team-body { padding: 0 20px 16px; }
+.kpi-row {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px;
+}
+.kpi-tag {
+  font-size: 11px; font-weight: 500;
+  background: var(--paper-2); border: 1px solid var(--border);
+  border-radius: 4px; padding: 3px 9px;
+  color: var(--ink-2);
+}
+
+/* ── Q&A CORE ── */
+.q-card {
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.q-header {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 20px;
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--border);
+}
+.q-num-circle {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'DM Serif Display', serif;
+  font-size: 18px; flex-shrink: 0;
+}
+.q-body { padding: 16px 20px; }
+
+/* ── SOP RING ── */
+.sop-ring {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 1px;
+  background: var(--border); border-radius: var(--r-lg); overflow: hidden;
+  margin-bottom: 16px;
+}
+.sop-cell {
+  background: #fff; padding: 16px 14px; text-align: center;
+}
+.sop-icon { font-size: 22px; margin-bottom: 6px; }
+.sop-name { font-size: 12px; font-weight: 700; margin-bottom: 3px; }
+.sop-desc { font-size: 11px; color: var(--ink-3); }
+
+/* ── DIVIDER ── */
+.divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+
+/* ── INLINE HIGHLIGHT ── */
+.hl { font-weight: 600; color: var(--ink); }
+.note {
+  background: var(--gold-lt);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--r) var(--r) 0;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: #6b4f10;
+  margin-top: 10px;
+}
+
+/* ── MILESTONE ── */
+.ms-row {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 12px 0; border-bottom: 1px solid var(--paper-3);
+}
+.ms-row:last-child { border-bottom: none; }
+.ms-badge {
+  font-size: 10px; font-weight: 700; letter-spacing: .08em;
+  padding: 3px 9px; border-radius: 4px; white-space: nowrap; flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .g2,.g3,.g4 { grid-template-columns: 1fr; }
+  .hero { padding: 40px 24px 36px; }
+  .page { padding: 28px 20px; }
+  .top-nav { padding: 0 16px; }
+  .hero-metrics { gap: 12px; }
+  .sop-ring { grid-template-columns: 1fr 1fr; }
+  .timeline::before { left: 70px; }
+  .tl-time { width: 70px; font-size: 10px; }
+  .tl-dot { left: 65.5px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <span class="nav-logo">iGV · 2025</span>
+  <button class="nav-btn on"  onclick="sw('overview')">战略全景</button>
+  <button class="nav-btn"     onclick="sw('method')">运营底层框架</button>
+  <button class="nav-btn"     onclick="sw('biz')">业务分类与执行方法</button>
+  <button class="nav-btn"     onclick="sw('target')">目标</button>
+  <button class="nav-btn"     onclick="sw('action')">行动规划</button>
+  <button class="nav-btn"     onclick="sw('team')">团队组织</button>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- ① 战略全景                                             -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div id="p-overview" class="panel on">
+  <div class="hero">
+    <p class="hero-eyebrow">iGV.com · 游戏虚拟交易 C2C 平台 · 运营战略 2026</p>
+    <h1 class="hero-title">明确方向，聚焦资源，<br>系统性增长</h1>
+    <p class="hero-sub">从用户需求出发，洞察每个游戏业务的真实需求规模；以需求为依据进行业务分类；再围绕分类匹配运营底层框架、分配精力权重，最终落地执行。</p>
+    <div class="hero-metrics">
+      <div class="metric-pill">
+        <span class="val">$200万</span>
+        <span class="lbl">2026年底月GMV目标</span>
+      </div>
+      <div class="metric-pill">
+        <span class="val">≥10%</span>
+        <span class="lbl">毛利率底线</span>
+      </div>
+      <div class="metric-pill">
+        <span class="val">≤2%</span>
+        <span class="lbl">市场费用/GMV上限</span>
+      </div>
+      <div class="metric-pill">
+        <span class="val">$6,000</span>
+        <span class="lbl">团队月奖金目标</span>
+      </div>
+    </div>
+    <div style="margin-top:20px;padding-top:16px;border-top:0.5px solid rgba(255,255,255,.12)">
+      <p style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:10px">现状基线（2026年5月）</p>
+      <div style="display:flex;gap:20px;flex-wrap:wrap">
+        <div><span style="font-size:18px;font-weight:500;color:rgba(255,255,255,.7)">$120万</span><span style="font-size:11px;color:rgba(255,255,255,.35);margin-left:6px">月GMV · 距目标 +67%</span></div>
+        <div><span style="font-size:18px;font-weight:500;color:rgba(255,255,255,.7)">12%</span><span style="font-size:11px;color:rgba(255,255,255,.35);margin-left:6px">毛利率 · 高于底线</span></div>
+        <div><span style="font-size:18px;font-weight:500;color:rgba(255,255,255,.7)">3%</span><span style="font-size:11px;color:rgba(255,255,255,.35);margin-left:6px">净利率</span></div>
+        <div><span style="font-size:18px;font-weight:500;color:rgba(255,255,255,.7)">~$3,600</span><span style="font-size:11px;color:rgba(255,255,255,.35);margin-left:6px">团队月奖金 · 距目标差 $2,400</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="section">
+      <h2 class="section-title">战略思路</h2>
+      <p class="section-sub">从用户需求出发，逐层递进，最终落地执行</p>
+      <div class="g4">
+        <div class="card" style="border-top:3px solid var(--ink-3)">
+          <span class="label" style="color:var(--ink-3)">出发点</span>
+          <div class="h3">用户需求</div>
+          <p class="body">洞察每个游戏业务的真实需求规模、需求类型和玩家搜索行为，这是一切判断的起点，决定是否值得投入资源。</p>
+        </div>
+        <div class="card" style="border-top:3px solid var(--blue)">
+          <span class="label" style="color:var(--blue)">第一层</span>
+          <div class="h3">业务分类</div>
+          <p class="body">以用户需求为核心，结合iGV供应现状，将业务归入四类：<strong>供应破局（A）· 体验破局（B）· 新游戏布局（C）· 老游戏提效（D）</strong></p>
+        </div>
+        <div class="card" style="border-top:3px solid var(--green)">
+          <span class="label" style="color:var(--green)">第二层</span>
+          <div class="h3">运营底层框架</div>
+          <p class="body">不同分类的业务，三个根本性问题的答案不同，四环SOP（站内·供应·获客·服务）的执行重点和精力权重不同。</p>
+        </div>
+        <div class="card" style="border-top:3px solid var(--amber)">
+          <span class="label" style="color:var(--amber)">第三层</span>
+          <div class="h3">精力分配与落地</div>
+          <p class="body">按业务分类决定精力权重和执行优先级，资源集中在最有杠杆的地方，不撒胡椒面。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">四类业务 · 精力分配总览</h2>
+      <p class="section-sub">不同类型业务的核心任务、驱动因素和GMV贡献预估</p>
+      <div style="border:0.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden">
+        <div style="display:grid;grid-template-columns:80px 1fr 1fr 1fr 1fr;background:var(--ink)">
+          <div style="padding:10px 14px;font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.06em;text-transform:uppercase"></div>
+          <div style="padding:10px 14px;font-size:11px;font-weight:700;color:var(--blue-lt);border-left:0.5px solid rgba(255,255,255,.1)">A类 · 供应破局</div>
+          <div style="padding:10px 14px;font-size:11px;font-weight:700;color:var(--red-lt);border-left:0.5px solid rgba(255,255,255,.1)">B类 · 体验破局</div>
+          <div style="padding:10px 14px;font-size:11px;font-weight:700;color:var(--gold-lt);border-left:0.5px solid rgba(255,255,255,.1)">C类 · 新游戏布局</div>
+          <div style="padding:10px 14px;font-size:11px;font-weight:700;color:var(--violet-lt);border-left:0.5px solid rgba(255,255,255,.1)">D类 · 老游戏提效</div>
+        </div>
+        <div style="display:grid;grid-template-columns:80px 1fr 1fr 1fr 1fr;border-top:0.5px solid var(--border)">
+          <div style="padding:10px 14px;font-size:11px;font-weight:600;color:var(--ink-3);background:var(--paper-2)">核心任务</div>
+          <div style="padding:10px 14px;font-size:12px;color:var(--ink-2);border-left:0.5px solid var(--border)">供应冷启动<br>+ SEM验证</div>
+          <div style="padding:10px 14px;font-size:12px;color:var(--ink-2);border-left:0.5px solid var(--border)">站内深度优化<br>+ 玩家洞察</div>
+          <div style="padding:10px 14px;font-size:12px;color:var(--ink-2);border-left:0.5px solid var(--border)">SEO提前布局<br>（T-3个月）</div>
+          <div style="padding:10px 14px;font-size:12px;color:var(--ink-2);border-left:0.5px solid var(--border)">渠道提效拓展<br>+ 忠诚度计划</div>
+        </div>
+        <div style="display:grid;grid-template-columns:80px 1fr 1fr 1fr 1fr;border-top:0.5px solid var(--border)">
+          <div style="padding:10px 14px;font-size:11px;font-weight:600;color:var(--ink-3);background:var(--paper-2)">精力投入</div>
+          <div style="padding:10px 14px;font-size:12px;color:var(--ink-2);border-left:0.5px solid var(--border)">★★★★</div>
+          <div style="padding:10px 14px;font-size:12px;color:var(--ink-2);border-left:0.5px solid var(--border)">★★★★★</div>
+          <div style="padding:10px 14px;font-size:12px;color:var(--ink-2);border-left:0.5px solid var(--border)">★★★</div>
+          <div style="padding:10px 14px;font-size:12px;color:var(--ink-2);border-left:0.5px solid var(--border)">★★</div>
+        </div>
+        <div style="display:grid;grid-template-columns:80px 1fr 1fr 1fr 1fr;border-top:0.5px solid var(--border)">
+          <div style="padding:10px 14px;font-size:11px;font-weight:600;color:var(--ink-3);background:var(--paper-2)">目标规模</div>
+          <div style="padding:10px 14px;font-size:12px;color:var(--ink-2);border-left:0.5px solid var(--border)">5款业务<br>$1,000/日/款</div>
+          <div style="padding:10px 14px;font-size:12px;color:var(--ink-2);border-left:0.5px solid var(--border)">3款业务<br>$5,000/日/款</div>
+          <div style="padding:10px 14px;font-size:12px;color:var(--ink-2);border-left:0.5px solid var(--border)">GTA6<br>$5,000+/日</div>
+          <div style="padding:10px 14px;font-size:12px;color:var(--ink-2);border-left:0.5px solid var(--border)">现有基础<br>+10%增量</div>
+        </div>
+        <div style="display:grid;grid-template-columns:80px 1fr 1fr 1fr 1fr;border-top:0.5px solid var(--border);background:var(--paper-2)">
+          <div style="padding:10px 14px;font-size:11px;font-weight:600;color:var(--ink-3)">月GMV贡献</div>
+          <div style="padding:10px 14px;font-size:13px;font-weight:700;color:var(--blue);border-left:0.5px solid var(--border)">+$15万</div>
+          <div style="padding:10px 14px;font-size:13px;font-weight:700;color:var(--red);border-left:0.5px solid var(--border)">+$45万</div>
+          <div style="padding:10px 14px;font-size:13px;font-weight:700;color:#b8860b;border-left:0.5px solid var(--border)">+$15万</div>
+          <div style="padding:10px 14px;font-size:13px;font-weight:700;color:var(--violet);border-left:0.5px solid var(--border)">+$12万</div>
+        </div>
+      </div>
+      <div class="note" style="margin-top:10px">四类合计月GMV增量 <strong>$87万</strong>，现状 $120万 + $87万 = <strong>$207万</strong>，超过$200万目标，有$7万余量。随A类和B类业务基数扩大，D类渠道提效的实际贡献将持续放大。</div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">双轨目标</h2>
+      <p class="section-sub">GMV衡量规模，毛利衡量可控利润贡献，两个都要看</p>
+      <div class="r2">
+        <div class="ci">
+          <p class="h3" style="margin-bottom:5px">GMV目标</p>
+          <p class="body">2026年底月GMV达到$200万，较现状增长67%。增量来自四类业务协同发力，B类体验破局是最大增量来源（+$45万）。</p>
+        </div>
+        <div class="ci">
+          <p class="h3" style="margin-bottom:5px">毛利目标（可控指标）</p>
+          <p class="body">GMV × 12% − 市场费用 = 毛利。市场费用严控在GMV的2%，毛利率底线10%（12% − 2% = 10%），不可突破。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- ② 运营底层框架                                          -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div id="p-method" class="panel">
+  <div class="page">
+
+    <div class="section">
+      <h2 class="section-title">三个根本性问题</h2>
+      <p class="section-sub">对每一个游戏业务，先回答这三个问题，再决定四环的资源分配方式</p>
+
+      <div class="q-card">
+        <div class="q-header">
+          <div class="q-num-circle" style="background:var(--blue-lt);color:var(--blue)">Q1</div>
+          <div>
+            <div class="h3" style="margin:0">交易量为什么会来？</div>
+            <div class="small">需求侧来源</div>
+          </div>
+        </div>
+        <div class="q-body">
+          <div class="row-accent">
+            <div class="accent-bar" style="background:var(--blue)"></div>
+            <div style="flex:1">
+              <div class="action-item" style="padding:8px 0">
+                <div style="flex:1"><span class="hl">玩家基本盘规模</span><br><span class="body">该游戏全球月活规模、付费率。体量决定市场天花板，决定资源投入上限。</span></div>
+              </div>
+              <div class="action-item" style="padding:8px 0">
+                <div style="flex:1"><span class="hl">交易需求搜索量</span><br><span class="body">核心关键词月搜索量（"buy [game] gold/account"等）。数字是需求是否真实存在的最直接依据。</span></div>
+              </div>
+              <div class="action-item" style="padding:8px 0;border:none">
+                <div style="flex:1"><span class="hl">需求时效性</span><br><span class="body">持续性刚需（金币/货币）vs 版本驱动脉冲需求（赛季道具）。决定运营节奏和备货策略。</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="q-card">
+        <div class="q-header">
+          <div class="q-num-circle" style="background:var(--green-lt);color:var(--green)">Q2</div>
+          <div>
+            <div class="h3" style="margin:0">用户为什么选iGV？</div>
+            <div class="small">差异化优势</div>
+          </div>
+        </div>
+        <div class="q-body">
+          <div class="g3" style="margin-bottom:12px">
+            <div class="card-sm">
+              <div class="h4" style="color:var(--blue)">金币类目</div>
+              <p class="small">核心差异化：<strong>价格力</strong>。站内突出价格透明度；卖家竞价规则驱动最优价格。</p>
+            </div>
+            <div class="card-sm">
+              <div class="h4" style="color:var(--green)">账号类目</div>
+              <p class="small">核心差异化：<strong>交易安全 + 所见即所得</strong>。自动化验号、属性获取、图片生成是技术特色。</p>
+            </div>
+            <div class="card-sm">
+              <div class="h4" style="color:var(--amber)">物品类目</div>
+              <p class="small">核心差异化：<strong>SKU丰富度</strong>。卖家上架便捷性是重点，工具越好，品类越丰富。</p>
+            </div>
+          </div>
+          <div class="row-accent">
+            <div class="accent-bar" style="background:var(--green)"></div>
+            <p class="body"><span class="hl">平台级信任感（通用）：</span>C2C平台最大痛点是信任。iGV的交易保障机制（先付后收、在线仲裁、快速退款）是相比散单的根本性壁垒，须在站内显著展示。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="q-card">
+        <div class="q-header">
+          <div class="q-num-circle" style="background:var(--amber-lt);color:var(--amber)">Q3</div>
+          <div>
+            <div class="h3" style="margin:0">卖家为什么愿意上架？</div>
+            <div class="small">供给侧动力</div>
+          </div>
+        </div>
+        <div class="q-body">
+          <div class="row-accent">
+            <div class="accent-bar" style="background:var(--amber)"></div>
+            <div style="flex:1">
+              <div class="action-item" style="padding:8px 0">
+                <div style="flex:1"><span class="hl">流量与成交机会</span><br><span class="body">卖家在iGV能持续赚到钱，是最根本的动力。买家流量规模是吸引和留住卖家的核心筹码。</span></div>
+              </div>
+              <div class="action-item" style="padding:8px 0">
+                <div style="flex:1"><span class="hl">卖家效率工具</span><br><span class="body">批量上货、库存管理、订单自动化。工具比低佣金更有长期黏性，让卖家迁移成本极高。</span></div>
+              </div>
+              <div class="action-item" style="padding:8px 0;border:none">
+                <div style="flex:1"><span class="hl">冷启动激励</span><br><span class="body">新业务冷启动期通过佣金让利 + 锁定特定类目售卖权限，换取卖家入驻和铺货意愿。</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">四环SOP</h2>
+      <p class="section-sub">站内·供应·获客·服务，四环各自回答一个核心问题，精力权重因业务类型而变</p>
+      <div class="sop-ring">
+        <div class="sop-cell">
+          <div class="sop-icon">🖥️</div>
+          <div class="sop-name" style="color:var(--blue)">站内</div>
+          <div class="sop-desc">回答Q2<br>转化·信任·卖点</div>
+        </div>
+        <div class="sop-cell">
+          <div class="sop-icon">📦</div>
+          <div class="sop-name" style="color:var(--amber)">供应</div>
+          <div class="sop-desc">回答Q3<br>招募·激励·留存</div>
+        </div>
+        <div class="sop-cell">
+          <div class="sop-icon">📡</div>
+          <div class="sop-name" style="color:var(--green)">获客</div>
+          <div class="sop-desc">回答Q1<br>渠道·ROI·规模</div>
+        </div>
+        <div class="sop-cell">
+          <div class="sop-icon">🎧</div>
+          <div class="sop-name" style="color:var(--red)">服务</div>
+          <div class="sop-desc">放大Q2<br>复购·口碑·LTV</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- ③ 业务分类与执行方法                                             -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div id="p-biz" class="panel">
+  <div class="page">
+    <div class="section">
+      <h2 class="section-title">四类业务分类</h2>
+      <p class="section-sub">从用户需求出发，结合iGV供应现状，确定业务类型和精力分配。品类判断：物品类、代练类天然偏体验驱动，SKU复杂、玩家决策链路长。</p>
+
+      <div class="g2">
+
+        <!-- 供应破局类 -->
+        <div class="biz-card biz-a">
+          <span class="chip chip-blue">A类</span>
+          <div class="biz-num" style="font-size:28px;margin-bottom:6px">供应破局类</div>
+          <div class="h4" style="margin-bottom:8px">用户需求存在，iGV没量，供应+流量即可跑通</div>
+          <p class="body" style="margin-bottom:12px">需求明确，用户知道要买什么。iGV只需有货、有曝光就能成交。执行难度相对低，冷启动周期短，跑通后快速规模化复制。</p>
+          <div class="star-row">
+            <div class="star-box" style="background:var(--paper-2)">
+              <span style="font-size:10px;font-weight:700;color:var(--ink-3)">站内</span>
+              <span class="stars" style="color:var(--ink-3)">★</span>
+            </div>
+            <div class="star-box" style="background:var(--blue-lt)">
+              <span style="font-size:10px;font-weight:700;color:var(--blue)">供应</span>
+              <span class="stars">★★★</span>
+            </div>
+            <div class="star-box" style="background:var(--blue-lt)">
+              <span style="font-size:10px;font-weight:700;color:var(--blue)">获客</span>
+              <span class="stars">★★★</span>
+            </div>
+            <div class="star-box" style="background:var(--paper-2)">
+              <span style="font-size:10px;font-weight:700;color:var(--ink-3)">服务</span>
+              <span class="stars" style="color:var(--ink-3)">★</span>
+            </div>
+          </div>
+          <div class="card-sm" style="margin-top:8px">
+            <div class="small"><span class="hl">最关键动作：</span>供应冷启动（佣金让利+锁定售卖权限）→ SEM小成本验证需求</div>
+            <div class="small" style="margin-top:4px"><span class="hl">验证标准：</span>SEM引流后30天内，日GMV稳定达到$1,000，验证通过进入规模化</div>
+            <div class="small" style="margin-top:4px"><span class="hl">典型品类：</span>金币类、货币类</div>
+          </div>
+        </div>
+
+        <!-- 体验破局类 -->
+        <div class="biz-card" style="border:1px solid var(--border);border-radius:var(--r-lg);padding:20px;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--red)"></div>
+          <span class="chip chip-red">A类</span>
+          <div class="biz-num" style="font-size:28px;margin-bottom:6px;color:var(--red)">体验破局类</div>
+          <div class="h4" style="margin-bottom:8px">用户需求存在，iGV没量，站内体验是关键变量</div>
+          <p class="body" style="margin-bottom:12px">用户决策链路复杂，光有货和流量不够，需要懂玩家心态——玩家在纠结什么、什么样的展示方式能让他下单。站内深度优化是核心壁垒。</p>
+          <div class="star-row">
+            <div class="star-box" style="background:var(--red-lt)">
+              <span style="font-size:10px;font-weight:700;color:var(--red)">站内</span>
+              <span class="stars" style="color:var(--red)">★★★</span>
+            </div>
+            <div class="star-box" style="background:var(--red-lt)">
+              <span style="font-size:10px;font-weight:700;color:var(--red)">供应</span>
+              <span class="stars" style="color:var(--red)">★★</span>
+            </div>
+            <div class="star-box" style="background:var(--red-lt)">
+              <span style="font-size:10px;font-weight:700;color:var(--red)">获客</span>
+              <span class="stars" style="color:var(--red)">★★</span>
+            </div>
+            <div class="star-box" style="background:var(--paper-2)">
+              <span style="font-size:10px;font-weight:700;color:var(--ink-3)">服务</span>
+              <span class="stars" style="color:var(--ink-3)">★</span>
+            </div>
+          </div>
+          <div class="card-sm" style="margin-top:8px">
+            <div class="small"><span class="hl">最关键动作：</span>站内深度优化（商品展示/决策信息/信任机制）+ 玩家洞察（用户调研/转化断点分析）</div>
+            <div class="small" style="margin-top:4px"><span class="hl">供应+流量：</span>复用供应破局类已跑通的方法论，不需要单独建设</div>
+            <div class="small" style="margin-top:4px"><span class="hl">典型品类：</span>物品类、代练类（SKU复杂，玩家决策链路长）</div>
+          </div>
+        </div>
+
+        <!-- 新游戏布局类 -->
+        <div class="biz-card biz-b">
+          <span class="chip chip-gold">B类</span>
+          <div class="biz-num" style="font-size:28px;margin-bottom:6px">新游戏布局类</div>
+          <div class="h4" style="margin-bottom:8px">游戏未上线，提前卡位，把握先发窗口</div>
+          <p class="body" style="margin-bottom:12px">需求待验证，但上线窗口期是抢占用户心智的最佳时机。最关键的动作是SEO提前布局——搜索引擎需要时间收录，必须在游戏上线前3个月启动。</p>
+          <div class="star-row">
+            <div class="star-box" style="background:var(--gold-lt)">
+              <span style="font-size:10px;font-weight:700;color:#7a5a10">SEO</span>
+              <span class="stars" style="color:#7a5a10">★★★</span>
+            </div>
+            <div class="star-box" style="background:var(--gold-lt)">
+              <span style="font-size:10px;font-weight:700;color:#7a5a10">供应</span>
+              <span class="stars" style="color:#7a5a10">★★</span>
+            </div>
+            <div class="star-box" style="background:var(--gold-lt)">
+              <span style="font-size:10px;font-weight:700;color:#7a5a10">站内</span>
+              <span class="stars" style="color:#7a5a10">★★</span>
+            </div>
+            <div class="star-box" style="background:var(--paper-2)">
+              <span style="font-size:10px;font-weight:700;color:var(--ink-3)">服务</span>
+              <span class="stars" style="color:var(--ink-3)">★</span>
+            </div>
+          </div>
+          <div class="card-sm" style="margin-top:8px">
+            <div class="small"><span class="hl">最关键动作：</span>SEO提前布局（T-3个月启动关键词调研+内容生产）</div>
+            <div class="small" style="margin-top:4px"><span class="hl">布局节奏：</span>T-3个月：SEO+站内搭建 → T-1个月：供应招募（复用开拓类方法论）→ T+0：上线即激活</div>
+            <div class="small" style="margin-top:4px"><span class="hl">今年重点：</span>GTA6（预计11月上线），6月起SEO布局，预计12月增量$15万</div>
+          </div>
+        </div>
+
+        <!-- 老游戏提效类 -->
+        <div class="biz-card biz-d">
+          <span class="chip chip-violet">C类</span>
+          <div class="biz-num" style="font-size:28px;margin-bottom:6px">老游戏提效类</div>
+          <div class="h4" style="margin-bottom:8px">iGV已有份额，在现有基础上做增量</div>
+          <p class="body" style="margin-bottom:12px">业务已在跑，不需要从零建立。重点是两件事：低成本渠道持续拓展提升流量效率；用户忠诚度计划驱动老用户复购，提升LTV。</p>
+          <div class="star-row">
+            <div class="star-box" style="background:var(--paper-2)">
+              <span style="font-size:10px;font-weight:700;color:var(--ink-3)">站内</span>
+              <span class="stars" style="color:var(--ink-3)">★</span>
+            </div>
+            <div class="star-box" style="background:var(--paper-2)">
+              <span style="font-size:10px;font-weight:700;color:var(--ink-3)">供应</span>
+              <span class="stars" style="color:var(--ink-3)">★</span>
+            </div>
+            <div class="star-box" style="background:var(--violet-lt)">
+              <span style="font-size:10px;font-weight:700;color:var(--violet)">获客</span>
+              <span class="stars" style="color:var(--violet)">★★★</span>
+            </div>
+            <div class="star-box" style="background:var(--violet-lt)">
+              <span style="font-size:10px;font-weight:700;color:var(--violet)">服务</span>
+              <span class="stars" style="color:var(--violet)">★★★</span>
+            </div>
+          </div>
+          <div class="card-sm" style="margin-top:8px">
+            <div class="small"><span class="hl">最关键动作①渠道提效：</span>SEO内容矩阵建设（10%）+ SEM AI关键词扩展（5%）+ 新渠道试点放量（5%），方法论横向复用至所有老游戏业务</div>
+            <div class="small" style="margin-top:4px"><span class="hl">最关键动作②忠诚度计划：</span>RFM模型分层触达老用户，提升购买频次；积分体系迭代优化，提升用户LTV</div>
+            <div class="small" style="margin-top:4px"><span class="hl">GMV预估：</span>渠道提效+用户运营合计预计带来20%+5%增量，随开拓类业务基数扩大效果持续放大</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 判断规则 -->
+      <div class="card" style="margin-top:4px">
+        <div class="h3" style="margin-bottom:12px">业务归类判断规则</div>
+        <div class="g2">
+          <div class="card-sm">
+            <div class="h4" style="margin-bottom:6px">供应破局 vs 体验破局</div>
+            <p class="small">首看品类：物品类、代练类天然偏体验破局（SKU复杂、玩家决策链路长）；金币类、货币类天然偏供应破局（需求直接、决策简单）。不确定时先按供应破局启动，验证阶段若转化持续偏低，升级为体验破局处理。</p>
+          </div>
+          <div class="card-sm">
+            <div class="h4" style="margin-bottom:6px">开拓类 vs 老游戏类</div>
+            <p class="small">核心判断：iGV在这个游戏业务上是否已有稳定供应和持续成交。有则为老游戏提效类；没有或极少则为开拓类（按品类再判断供应破局还是体验破局）。</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- ④ 目标                                                 -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div id="p-target" class="panel">
+  <div class="page">
+
+    <div class="section">
+      <h2 class="section-title">增量来源拆解</h2>
+      <p class="section-sub">月GMV从$120万增长至$200万，增量$80万，四类业务各有贡献，合计$87万，有$7万余量</p>
+
+      <div class="card">
+        <div class="action-item">
+          <div class="action-num" style="background:var(--blue-lt);color:var(--blue)">A</div>
+          <div class="action-body">
+            <div class="h4">供应破局类 — 月GMV增量 +$15万</div>
+            <p class="body">5款业务完成供应冷启动+SEM验证，每款日GMV稳定$1,000，合计月GMV增量$15万。供应冷启动方法论跑通后快速复制，典型品类：金币类、充值类。</p>
+            <div class="action-meta">
+              <span class="chip chip-blue">目标5款业务</span>
+              <span class="chip chip-blue">$1,000/日/款</span>
+              <span class="chip chip-blue">Q3验证1-2款</span>
+              <span class="chip chip-blue">Q4累计5款</span>
+            </div>
+          </div>
+        </div>
+        <div class="action-item">
+          <div class="action-num" style="background:var(--red-lt);color:var(--red)">B</div>
+          <div class="action-body">
+            <div class="h4">体验破局类 — 月GMV增量 +$45万</div>
+            <p class="body">3款业务完成站内深度优化+玩家洞察，每款日GMV稳定$5,000，合计月GMV增量$45万。体验破局对应物品类、代练类，客单价高、决策链路长，跑通后单业务体量远大于A类。供应和流量复用A类已有方法论。</p>
+            <div class="action-meta">
+              <span class="chip chip-red">目标3款业务</span>
+              <span class="chip chip-red">$5,000/日/款</span>
+              <span class="chip chip-red">Q3完成站内优化</span>
+              <span class="chip chip-red">Q4规模化</span>
+            </div>
+          </div>
+        </div>
+        <div class="action-item">
+          <div class="action-num" style="background:var(--gold-lt);color:#7a5a10">C</div>
+          <div class="action-body">
+            <div class="h4">新游戏布局类（GTA6）— 月GMV增量 +$15万</div>
+            <p class="body">GTA6预计11月上线，提前3个月启动SEO布局。上线即有自然流量，SEM同步激活。12月日GMV预计$5,000+，贡献月GMV增量约$15万。</p>
+            <div class="action-meta">
+              <span class="chip chip-gold">6月SEO启动</span>
+              <span class="chip chip-gold">9月供应准备</span>
+              <span class="chip chip-gold">11月上线激活</span>
+            </div>
+          </div>
+        </div>
+        <div class="action-item" style="border:none">
+          <div class="action-num" style="background:var(--violet-lt);color:var(--violet)">D</div>
+          <div class="action-body">
+            <div class="h4">老游戏提效类 — 月GMV增量 +$12万</div>
+            <p class="body">在现有$120万基础上，通过渠道提效拓展（SEO/SEM/新渠道）+用户忠诚度计划（RFM分层触达+积分体系），合计带来10%增量约$12万。随A类和B类业务跑起来，GMV基数扩大，D类10%作用在更大基数上，实际贡献将超过$12万。</p>
+            <div class="action-meta">
+              <span class="chip chip-violet">渠道提效</span>
+              <span class="chip chip-violet">用户忠诚度计划</span>
+              <span class="chip chip-violet">6月定验证标准</span>
+              <span class="chip chip-violet">7月验证</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="border:0.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin-top:4px">
+        <div style="display:grid;grid-template-columns:90px repeat(4,1fr);background:var(--paper-2)">
+          <div style="padding:10px 14px;font-size:11px;font-weight:600;color:var(--ink-3)">来源</div>
+          <div style="padding:10px 14px;font-size:13px;font-weight:700;color:var(--blue);border-left:0.5px solid var(--border)">A类 +$15万</div>
+          <div style="padding:10px 14px;font-size:13px;font-weight:700;color:var(--red);border-left:0.5px solid var(--border)">B类 +$45万</div>
+          <div style="padding:10px 14px;font-size:13px;font-weight:700;color:#b8860b;border-left:0.5px solid var(--border)">C类 +$15万</div>
+          <div style="padding:10px 14px;font-size:13px;font-weight:700;color:var(--violet);border-left:0.5px solid var(--border)">D类 +$12万</div>
+        </div>
+        <div style="display:flex;border-top:0.5px solid var(--border)">
+          <div style="width:90px;flex-shrink:0;padding:12px 14px;font-size:11px;font-weight:600;color:var(--ink-3)">合计</div>
+          <div style="flex:1;padding:12px 20px;font-size:15px;font-weight:700;color:var(--green);border-left:0.5px solid var(--border);display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+            增量 $87万 &nbsp;·&nbsp; 现状 $120万 + $87万 = <span style="font-size:18px">$207万</span> &nbsp;·&nbsp; 超目标 $7万 ✓
+          </div>
+        </div>
+      </div>
+
+      <div class="note" style="margin-top:10px">毛利底线：月GMV $200万 × 10% = 月毛利 $20万。市场费用严控在GMV的2%（佣金12% − 市场费用2% = 毛利10%）。</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ⑤ 行动规划 -->
+<div id="p-action" class="panel">
+  <div class="page">
+    <div class="section">
+      <h2 class="section-title">行动规划</h2>
+      <p class="section-sub">按业务分类展开核心行动事项，时间节点明确，验证标准清晰</p>
+
+      <!-- A类 -->
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:14px">
+          <div>
+            <span class="chip chip-blue" style="margin-bottom:6px">A类 · 供应破局</span>
+            <div class="h3">供应冷启动 + SEM小成本验证</div>
+          </div>
+          <span style="font-size:12px;font-weight:600;background:var(--blue-lt);color:var(--blue);padding:4px 12px;border-radius:20px">首款6月底完成验证</span>
+        </div>
+        <p class="body" style="margin-bottom:12px">当前已有1款业务完成供应冷启动和站内搭建，下一步启动SEM引流完成MVP闭环验证。验证通过后沉淀方法论，Q3完成1-2款，Q4累计5款，合计目标日GMV $5,000+。</p>
+        <div class="g2" style="margin-bottom:10px">
+          <div class="card-sm">
+            <div class="small"><span class="hl">执行路径：</span>供应冷启动（佣金让利+锁定售卖权限）→ 站内基础搭建 → SEM引流验证 → 方法论复制</div>
+          </div>
+          <div class="card-sm">
+            <div class="small"><span class="hl">验证标准：</span>SEM引流后30天内，日GMV稳定达到$1,000，验证通过，进入规模化</div>
+          </div>
+        </div>
+        <div class="note"><span style="font-weight:600;color:var(--ink)">典型品类：</span>金币类、充值类。需求直接，决策链路短，有货有曝光即可成交。</div>
+      </div>
+
+      <!-- B类 -->
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:14px">
+          <div>
+            <span class="chip chip-red" style="margin-bottom:6px">B类 · 体验破局</span>
+            <div class="h3">站内深度优化 + 玩家洞察</div>
+          </div>
+          <span style="font-size:12px;font-weight:600;background:var(--red-lt);color:var(--red);padding:4px 12px;border-radius:20px">Q3完成站内优化</span>
+        </div>
+        <p class="body" style="margin-bottom:12px">供应和流量复用A类已跑通的方法论，不需要单独建设。核心难点在站内——需要理解玩家购买决策过程，优化商品展示、决策信息和信任机制，最终让玩家愿意在iGV完成高价值交易。目标3款业务，每款日GMV $5,000+。</p>
+        <div class="g2" style="margin-bottom:10px">
+          <div class="card-sm">
+            <div class="small"><span class="hl">执行路径：</span>玩家需求调研（用户访谈/竞品分析）→ 转化断点识别 → 商品页深度改版 → 持续AB测试迭代</div>
+          </div>
+          <div class="card-sm">
+            <div class="small"><span class="hl">验证标准：</span>站内优化后30天内，日GMV稳定达到$1,000（过渡目标），再逐步提升至$5,000</div>
+          </div>
+        </div>
+        <div class="note"><span style="font-weight:600;color:var(--ink)">典型品类：</span>物品类、代练类。SKU复杂，玩家决策链路长，站内体验是转化的核心变量。体验做好后，本质上和A类的运营动作趋于一致。</div>
+      </div>
+
+      <!-- C类 -->
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:14px">
+          <div>
+            <span class="chip chip-gold" style="margin-bottom:6px">C类 · 新游戏布局</span>
+            <div class="h3">SEO提前布局 — 以GTA6为核心</div>
+          </div>
+          <span style="font-size:12px;font-weight:600;background:var(--gold-lt);color:#7a5a10;padding:4px 12px;border-radius:20px">GTA6预计11月上线</span>
+        </div>
+        <div class="timeline">
+          <div class="tl-row">
+            <div class="tl-time">6月</div>
+            <div class="tl-dot" style="background:var(--gold)"></div>
+            <div class="tl-content">
+              <div class="tl-phase">SEO关键词调研 + 内容生产启动</div>
+              <p class="small">基于玩家社区真实搜索行为确定关键词方向，用AI批量生产内容。SEO需要3-6个月收录沉淀，6月启动是最晚节点。</p>
+            </div>
+          </div>
+          <div class="tl-row">
+            <div class="tl-time">7月</div>
+            <div class="tl-dot" style="background:var(--gold)"></div>
+            <div class="tl-content">
+              <div class="tl-phase">站内方案确定 + 验号体系调研</div>
+              <p class="small">从GTA5调研自动化验号可行性，确定账号类目站内方案并启动开发（开发周期≤15天）。站内能力复用B类体验破局方法论。</p>
+            </div>
+          </div>
+          <div class="tl-row">
+            <div class="tl-time">9月</div>
+            <div class="tl-dot" style="background:var(--gold)"></div>
+            <div class="tl-content">
+              <div class="tl-phase">供应招募准备</div>
+              <p class="small">盘点目标卖家资源，启动招募（复用A类冷启动方法论：佣金让利+售卖权限），确保上线第一天即有可交易供应。</p>
+            </div>
+          </div>
+          <div class="tl-row">
+            <div class="tl-time">11月</div>
+            <div class="tl-dot" style="background:var(--blue)"></div>
+            <div class="tl-content">
+              <div class="tl-phase">GTA6上线 — 立即激活全渠道</div>
+              <p class="small">SEO内容已就位，SEM同步启动，供应已备好。上线即有交易，抢占玩家心智。预计12月月GMV贡献$15万。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- D类 -->
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:14px">
+          <div>
+            <span class="chip chip-violet" style="margin-bottom:6px">D类 · 老游戏提效</span>
+            <div class="h3">渠道提效拓展 + 用户忠诚度计划</div>
+          </div>
+          <span style="font-size:12px;font-weight:600;background:var(--violet-lt);color:var(--violet);padding:4px 12px;border-radius:20px">持续推进</span>
+        </div>
+        <div class="g2" style="margin-bottom:12px">
+          <div>
+            <div class="card-sm" style="margin-bottom:8px">
+              <div class="h4" style="margin-bottom:5px;color:var(--green)">渠道提效拓展</div>
+              <p class="small">SEO内容矩阵持续建设；SEM用AI扩展关键词提升ROI；Discord/INS KOC/TikTok等新渠道逐步验证放量。6月小成本试探→7月基于数据决策→Q4跑通渠道规模化。</p>
+            </div>
+            <div class="card-sm">
+              <div class="h4" style="margin-bottom:5px;color:var(--violet)">用户忠诚度计划</div>
+              <p class="small">RFM模型分层触达老用户，激活复购。以Dofus Kamas为验证标杆（现复购率50%，人均2.55次），目标复购率提升至55%+。6月定标准，7月验证，8月确认推进方案。</p>
+            </div>
+          </div>
+          <div class="card-sm" style="align-self:start">
+            <div class="h4" style="margin-bottom:8px">关键时间节点</div>
+            <div class="action-item" style="padding:6px 0">
+              <div style="width:40px;font-size:11px;font-weight:600;color:var(--ink-3);flex-shrink:0">6月</div>
+              <div class="small">Discord+INS KOC小成本试探；忠诚度验证标准确定</div>
+            </div>
+            <div class="action-item" style="padding:6px 0">
+              <div style="width:40px;font-size:11px;font-weight:600;color:var(--ink-3);flex-shrink:0">7月</div>
+              <div class="small">渠道可行性评估；RFM首次触达验证</div>
+            </div>
+            <div class="action-item" style="padding:6px 0">
+              <div style="width:40px;font-size:11px;font-weight:600;color:var(--ink-3);flex-shrink:0">Q4</div>
+              <div class="small">验证有效渠道规模化；忠诚度计划全面展开</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- milestone -->
+      <div class="card">
+        <div class="h3" style="margin-bottom:12px">关键里程碑</div>
+        <div class="ms-row">
+          <div class="ms-badge" style="background:var(--paper-2);color:var(--ink-3)">M0·已完成</div>
+          <div style="flex:1"><div class="h4">战略框架 + 评估工具就绪</div><p class="small">运营方法论、业务分类框架、业务评估大表（iGV内部数据已录入）全部完成。</p></div>
+        </div>
+        <div class="ms-row">
+          <div class="ms-badge" style="background:var(--blue-lt);color:var(--blue)">M1·6月10日</div>
+          <div style="flex:1"><div class="h4">业务评估分类完成</div><p class="small">现有业务按A/B/C/D四类完成分类，优先级地图输出，每个业务90天首要行动确定。</p></div>
+        </div>
+        <div class="ms-row">
+          <div class="ms-badge" style="background:var(--gold-lt);color:#7a5a10">M2·6月底</div>
+          <div style="flex:1"><div class="h4">目标确认 + A类首款MVP验证完成</div><p class="small">目标与公司确认锁定；A类首款业务完成SEM验证，供应破局方法论得到验证。</p></div>
+        </div>
+        <div class="ms-row">
+          <div class="ms-badge" style="background:var(--green-lt);color:var(--green)">M3·7月初</div>
+          <div style="flex:1"><div class="h4">Q3全面执行启动</div><p class="small">A类规模化复制、B类站内优化、C类SEO持续、D类渠道验证+忠诚度测试同步展开。</p></div>
+        </div>
+        <div class="ms-row">
+          <div class="ms-badge" style="background:var(--green-lt);color:var(--green)">M4·9月底</div>
+          <div style="flex:1"><div class="h4">Q3阶段检验</div><p class="small">A类累计2款验证通过；B类至少1款站内优化完成；D类渠道可行性结论出炉；GTA6供应准备启动。</p></div>
+        </div>
+        <div class="ms-row" style="border:none">
+          <div class="ms-badge" style="background:var(--ink);color:#fff">M5·12月底</div>
+          <div style="flex:1"><div class="h4">年度目标达成</div><p class="small">月GMV $200万，团队月奖金$6,000，毛利率≥10%。</p></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ⑥ 团队组织 -->
+<div id="p-team" class="panel">
+  <div class="page">
+
+    <div class="section">
+      <h2 class="section-title">团队分工框架</h2>
+      <p class="section-sub">现有运营团队6人（运营×4、SEM×1、SEO×1）。按业务分类分配主负责人，各游戏运营仍维持日常基础运营工作，同时作为次要负责人配合主负责人推进对应类别的核心行动。</p>
+
+      <div class="note" style="margin-bottom:20px">
+        <span style="font-weight:600;color:var(--ink)">分工原则：</span>每类业务设主负责人（专注该类核心行动事项）和次要负责人（对应游戏的日常运营，提供游戏侧知识和配合执行）。具体游戏的次要负责人根据实际游戏运营分工确定，不在此固定。
+      </div>
+
+      <div class="team-card">
+        <div class="team-header" style="background:var(--blue-lt);border-bottom:1px solid var(--border)">
+          <div>
+            <div class="h3" style="color:var(--blue)">A类 · 供应破局</div>
+            <div class="small">供应冷启动 + SEM验证，快速规模化复制</div>
+          </div>
+          <span class="chip chip-blue">主负责</span>
+        </div>
+        <div class="team-body">
+          <div class="g2" style="margin:12px 0 10px">
+            <div class="card-sm">
+              <div class="h4" style="margin-bottom:4px">主负责人</div>
+              <p class="small"><strong>王珂（运营）</strong>：主导供应冷启动SOP建立、卖家招募话术、MVP验证流程。方法论跑通后带团队复制至更多A类业务。</p>
+              <p class="small" style="margin-top:6px"><strong>罗尉之（SEM）</strong>：负责A类业务SEM引流验证，严控CAC和ROI，提供流量侧验证数据支撑。</p>
+            </div>
+            <div class="card-sm">
+              <div class="h4" style="margin-bottom:4px">次要负责人</div>
+              <p class="small">对应游戏的日常运营人员，提供游戏侧上下文（卖家资源、用户需求特征、竞品情况），配合冷启动执行。具体由游戏分工确定。</p>
+            </div>
+          </div>
+          <div class="kpi-row">
+            <span class="kpi-tag">MVP验证通过数量</span>
+            <span class="kpi-tag">A类业务日GMV</span>
+            <span class="kpi-tag">冷启动周期时长</span>
+            <span class="kpi-tag">SEM CAC</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-header" style="background:var(--red-lt);border-bottom:1px solid var(--border)">
+          <div>
+            <div class="h3" style="color:var(--red)">B类 · 体验破局</div>
+            <div class="small">站内深度优化 + 玩家洞察，体验跑通即转为A类动作</div>
+          </div>
+          <span class="chip chip-red">主负责</span>
+        </div>
+        <div class="team-body">
+          <div class="g2" style="margin:12px 0 10px">
+            <div class="card-sm">
+              <div class="h4" style="margin-bottom:4px">主负责人</div>
+              <p class="small"><strong>赵梁（运营）</strong>：主导玩家需求调研、转化断点分析、商品页深度改版、AB测试迭代。B类体验跑通后，后续供应和流量动作复用A类方法论。</p>
+            </div>
+            <div class="card-sm">
+              <div class="h4" style="margin-bottom:4px">次要负责人</div>
+              <p class="small">对应游戏的日常运营人员，提供玩家行为洞察和游戏知识，协助理解用户决策链路。B类重点是体验，暂无专职SEM配合。</p>
+            </div>
+          </div>
+          <div class="kpi-row">
+            <span class="kpi-tag">商品页转化率</span>
+            <span class="kpi-tag">B类业务日GMV</span>
+            <span class="kpi-tag">下单完成率</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-header" style="background:var(--gold-lt);border-bottom:1px solid var(--border)">
+          <div>
+            <div class="h3" style="color:#7a5a10">C类 · 新游戏布局</div>
+            <div class="small">SEO提前布局为核心，供应和站内复用开拓类方法论</div>
+          </div>
+          <span class="chip chip-gold">主负责</span>
+        </div>
+        <div class="team-body">
+          <div class="g2" style="margin:12px 0 10px">
+            <div class="card-sm">
+              <div class="h4" style="margin-bottom:4px">主负责人</div>
+              <p class="small"><strong>陈翔宇（SEO）</strong>：6月启动GTA6关键词调研和内容生产，建立SEO内容矩阵，确保游戏上线时自然流量就位。SEO是C类最关键动作，越早启动越好。</p>
+            </div>
+            <div class="card-sm">
+              <div class="h4" style="margin-bottom:4px">次要负责人</div>
+              <p class="small">供应准备（复用A类冷启动方法论，由王珂/赵梁配合）；站内搭建（复用B类体验优化方法论，由赵梁配合）。各环节有清晰的方法论来源，不需要重复建设。</p>
+            </div>
+          </div>
+          <div class="kpi-row">
+            <span class="kpi-tag">SEO自然流量MoM增长</span>
+            <span class="kpi-tag">核心词排名提升</span>
+            <span class="kpi-tag">新增内容页数/月</span>
+            <span class="kpi-tag">GTA6上线首月GMV</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-header" style="background:var(--violet-lt);border-bottom:1px solid var(--border)">
+          <div>
+            <div class="h3" style="color:var(--violet)">D类 · 老游戏提效</div>
+            <div class="small">渠道提效拓展 + 用户忠诚度计划，在现有基础上做增量</div>
+          </div>
+          <span class="chip chip-violet">主负责</span>
+        </div>
+        <div class="team-body">
+          <div class="g2" style="margin:12px 0 10px">
+            <div class="card-sm">
+              <div class="h4" style="margin-bottom:4px">主负责人</div>
+              <p class="small"><strong>朱东霞（运营）</strong>：主导用户忠诚度计划（RFM模型建立、复购触达、积分体系）；统筹D类业务的渠道提效策略。</p>
+              <p class="small" style="margin-top:6px"><strong>罗尉之（SEM）</strong>：负责D类业务SEM优化（AI扩词提ROI）；主导Discord/INS KOC/TikTok等新渠道试点，基于验证结果决策规模化。</p>
+            </div>
+            <div class="card-sm">
+              <div class="h4" style="margin-bottom:4px">次要负责人</div>
+              <p class="small">对应游戏的日常运营人员，提供游戏侧用户洞察（老用户行为特征、社区活跃情况），配合触达内容制作和渠道素材提供。</p>
+            </div>
+          </div>
+          <div class="kpi-row">
+            <span class="kpi-tag">买家复购率</span>
+            <span class="kpi-tag">人均购买频次</span>
+            <span class="kpi-tag">新渠道GMV贡献</span>
+            <span class="kpi-tag">市场费用/GMV（≤2%）</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">负责人工作重心</h2>
+      <p class="section-sub">不陷入具体执行，核心价值在资源分配和方向校准</p>
+      <div class="g3">
+        <div class="card-sm">
+          <div class="h4" style="margin-bottom:6px">6月（摸底期）</div>
+          <p class="small">完成业务评估分类；团队1对1能力盘点，确认各人职能侧重；与公司对齐目标框架；建立周报节奏。</p>
+        </div>
+        <div class="card-sm">
+          <div class="h4" style="margin-bottom:6px">7月（启动期）</div>
+          <p class="small">正式确认各业务主次负责人和KPI；确保四类行动事项按节点推进；每周review四个健康度指标。</p>
+        </div>
+        <div class="card-sm">
+          <div class="h4" style="margin-bottom:6px">Q3-Q4（执行期）</div>
+          <p class="small">周维度跟踪GMV和毛利达成；发现偏离及时介入调整资源；渠道验证结论决策；12月冲刺$200万目标。</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <div class="h3" style="margin-bottom:12px">四个健康度指标周维度监控</div>
+        <div class="g2">
+          <div>
+            <div class="action-item" style="padding:8px 0">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:6px"></div>
+              <div><span class="hl" style="color:var(--blue)">站内健康度：</span><span class="body">商品页转化率、下单完成率、买家30天复购率</span></div>
+            </div>
+            <div class="action-item" style="padding:8px 0;border:none">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:6px"></div>
+              <div><span class="hl" style="color:var(--green)">获客健康度：</span><span class="body">分渠道CAC、SEO自然流量MoM增长、市场费用/GMV比率</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="action-item" style="padding:8px 0">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:6px"></div>
+              <div><span class="hl" style="color:var(--amber)">供应健康度：</span><span class="body">活跃卖家数MoM、卖家90天留存率、卖家服务达标率</span></div>
+            </div>
+            <div class="action-item" style="padding:8px 0;border:none">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--violet);flex-shrink:0;margin-top:6px"></div>
+              <div><span class="hl" style="color:var(--violet)">用户健康度：</span><span class="body">买家复购率、人均购买频次、D类业务GMV占比</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function sw(id) {
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('on'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('on'));
+  event.target.classList.add('on');
+  document.getElementById('p-' + id).classList.add('on');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
